@@ -56,10 +56,8 @@ html_content = """<!DOCTYPE html>
 </body>
 </html>"""
 
-# Зберігаємо файл
 html_path = Path("portfolio.html")
 html_path.write_text(html_content, encoding="utf-8")
 
-# Створюємо ZIP
 with ZipFile("portfolio_site.zip", "w") as zipf:
     zipf.write("portfolio.html")
